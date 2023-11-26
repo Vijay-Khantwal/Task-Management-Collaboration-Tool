@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teams</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="teamsstyle.css" />
+  </head>
+  <body id="body1">
+    <div class="blur-div" id="blur-div" onclick="remove()"></div>
+    <div class="header">
+      <div class="website-name">Worklab</div>
+      <div class="head">
+        <a href="second.html">Tasks</a>
+        <a href="#about">About</a>
+        <a href="#">Team</a>
+        <i class="bx bx-user user">
+          <div class="user-data">
+            <i class="bx bxs-user-circle"></i>
+            <h3 id="current_user_name">Name</h3>
+            <p id="current_user_email">emailhai@gmail.com</p>
+            <a href="LogIN/Signup.html" class="add-account">Add+</a>
+            <a href="#" class="manage-account"> Manage your account </a>
+            <button
+              class="signout-button"
+              type="button"
+              onclick="location.replace('LogIN/LogIn.html');"
+            >
+              signout
+            </button>
+          </div>
+        </i>
+      </div>
+    </div>
+    <div class="header-image">
+      <div>Team Work</div>
+    </div>
+    <div class="container">
+      <div class="interact">
+        <div class="request">
+          <h2>New request</h2>
+          <button type="button" onclick="popup()">+</button>
+        </div>
+        <div class="chat" id="chat-area" onclick="remove()">
+          <h2>Chatbox</h2>
+          <div id="chat1"><p>hi</p></div>
+          <div>Hello!</div>
+        </div>
+
+        <form class="chat-input">
+          <input placeholder="Type a message" id="message" type="text" />
+
+          <button type="submit" onclick="addmessage(); return false;">
+            <i class="bx bx-send"></i>
+          </button>
+        </form>
+      </div>
+      <div class="todo" id="task-area1">
+        <h2>TO DO</h2>
+        <button type="button" onclick="blur_div();input_prompt_1()">+</button>
+        <div id="task1"><i class="bx bxs-time"></i></div>
+        <button id="stop_timer_button" onclick="stop_timer()">
+          Stop Timer
+        </button>
+      </div>
+      <div class="done" id="task-area2">
+        <h2>DONE</h2>
+        <button type="button" onclick="blur_div();input_prompt_2()">+</button>
+        <div class="task1">DO work</div>
+      </div>
+    </div>
+    <div class="side-image">
+      <div class="doc-image">
+        <img src="images\document.png" alt="document image" />
+      </div>
+      <div class="document-upload">
+        <div class="up-text"><h4>Upload your work!</h4></div>
+        <div class="upload">
+          <label for="up"
+            ><i class="bx bx-upload"></i> Upload files or link</label
+          >
+          <input type="file" id="up" />
+        </div>
+        <div class="download">
+          <button type="button">View uploads</button>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="about" id="about">
+        <h4>WORKLAB</h4>
+        <h5>
+          description met consectetur adipisicing elit. Reiciendis debitis
+          cumque ducimus saepe numquam maxime architecto modi quas eveniet
+          velit?
+        </h5>
+      </div>
+      <div class="social-icons">
+        <i class="bx bxl-instagram"></i>
+        <i class="bx bxl-facebook-circle"></i>
+        <i class="bx bxl-twitter"></i>
+        <i class="bx bxl-youtube"></i>
+        <i class="bx bxl-gmail"></i>
+        <i class="bx bxs-phone"></i>
+        <i class="bx bxl-whatsapp"></i>
+      </div>
+    </footer>
+    <div class="popup" id="pp">
+      <div class="close-button">
+        <i class="bx bx-window-close" onclick="remove()"></i>
+      </div>
+      <div class="grid-container" id="grid-container">
+        <div class="grid-item">Name</div>
+        <div class="grid-item">Title</div>
+        <div class="grid-item">Email/Contact</div>
+        <div class="grid-item">Vijay Khantwal</div>
+        <div class="grid-item">Web Developer</div>
+        <a class="grid-item" href="mailto:vkhantwal999@gmail.com">vkhantwal999@gmail.com</a>
+      </div>
+    </div>
+    <div class="prompt-input" id="input-prompt-1">
+      <form>
+        <h5>How about adding some value!</h5>
+        <input type="text" placeholder="" id="input1" />
+        <label for="input-hours">Enter work duration</label>
+        <input id="input-hours" type="number" required />
+
+        <button type="submit" onclick="addtask1(); return false;">
+          Add Task
+        </button>
+      </form>
+    </div>
+    <div class="prompt-input" id="input-prompt-2">
+      <form>
+        <h5>Viola! Catchy Text</h5>
+        <input type="text" placeholder="" id="input2" />
+        <button type="submit" onclick="addtask2(); return false;">
+          Task Done!
+        </button>
+      </form>
+    </div>
+  </body>
+  <script src="teamsscript.js"></script>
+</html>
