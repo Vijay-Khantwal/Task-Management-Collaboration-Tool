@@ -5,11 +5,11 @@ this webite is a part of project work and using this websites you can create acc
 
 Setup:
 Initialize the local storage with the following values:-
-Key                  >Value
-email_data           >[]
-name_data            >[]
-current_user_data    >{}
-chat_messages        >[]
-todo                 >[]
-done                 >[]
+Key                  >Value;
+email_data           >[];
+name_data            >[];
+current_user_data    >{};
+chat_messages        >[];
+todo                 >[];
+done                 >[];
 time_value           >[]
