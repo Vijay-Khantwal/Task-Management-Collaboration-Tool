@@ -86,6 +86,16 @@ function addtask2() {
 let store_data_name = JSON.parse(localStorage.getItem("name_data"));
 let store_data_email = JSON.parse(localStorage.getItem("email_data"));
 let time_value = JSON.parse(localStorage.getItem("time_value"));
+let chat_messages = JSON.parse(localStorage.getItem("chat_messages"));
+let current_user_data = JSON.parse(localStorage.getItem("current_user_data"));
+if (chat_messages == null) {
+  chat_messages = [];
+  localStorage.setItem("chat_messages", JSON.stringify(chat_messages));
+}
+if (current_user_data == null) {
+  current_user_data = [];
+  localStorage.setItem("current_user_data", JSON.stringify(current_user_data));
+}
 if (store_data_name == null) {
   store_data_name = [];
   localStorage.setItem("name_data", JSON.stringify(store_data_name));
@@ -229,3 +239,4 @@ for (i = 0; i < todo.length; i++) {
 if (todo.length != 0) {
   set_timer(time_value);
 }
+
